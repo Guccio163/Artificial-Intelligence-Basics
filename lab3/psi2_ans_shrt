@@ -1,0 +1,70 @@
+Spadek wzdłuż gradientu (Gradient Descent): To algorytm optymalizacyjny używany do minimalizacji funkcji kosztu poprzez dostosowywanie wag w kierunku przeciwnym do gradientu funkcji kosztu.
+
+Stochastyczny spadek wzdłuż gradientu (Stochastic Gradient Descent - SGD): Wariant spadku wzdłuż gradientu, w którym aktualizacja wag następuje po każdym przykładzie treningowym, co wprowadza 
+losowość do procesu.
+
+Funkcja aktywacji neuronu: To nieliniowa funkcja stosowana na wyjściu neuronu, wprowadzająca nieliniowość do modelu. Przykłady to sigmoid, tanh, ReLU.
+
+Rodzaje funkcji kosztu w uczeniu sieci neuronowych:
+Błąd średniokwadratowy (MSE)
+Entropia krzyżowa (Cross-Entropy)
+
+Współczynnik uczenia (Learning Rate): Parametr kontrolujący, jak bardzo wagi są dostosowywane podczas treningu. Odpowiedni wybór jest kluczowy dla skutecznego uczenia sieci.
+
+Własności funkcji kosztu w kontekście uczenia sieci neuronowych: Funkcje kosztu muszą być różniczkowalne, aby można było stosować algorytm propagacji wstecznej.
+
+Sieć w pełni połączona (Fully Connected Network): Inaczej nazywana siecią wielowarstwową (MLP), składa się z warstw neuronów, w których każdy neuron jest połączony z każdym neuronem w warstwie poprzedniej i następnej.
+
+Funkcja softmax: Funkcja aktywacji używana w warstwie wyjściowej sieci neuronowej do przekształcenia wyników na rozkład prawdopodobieństwa.
+
+Entropia krzyżowa (Cross-Entropy): Funkcja kosztu, często stosowana w problemach klasyfikacji, mierzy różnicę między dwiema rozkładami prawdopodobieństwa.
+
+Sieć neuronowa jako uniwersalny aproksymator: Twierdzenie mówiące, że sieć neuronowa o jednej warstwie ukrytej i nieliniowych funkcjach aktywacji może przybliżyć dowolną funkcję ciągłą na ograniczonym zbiorze.
+
+Wsteczna propagacja błędu (Backpropagation): Algorytm używany do uczenia sieci neuronowej poprzez minimalizację funkcji kosztu za pomocą spadku wzdłuż gradientu.
+
+Działanie pojedynczego neuronu sieci neuronowej: Pojedynczy neuron w sieci neuronowej to podstawowy element przetwarzający dane. Neuron otrzymuje wejścia, waży je według przypisanych wag, sumuje je, dodaje obciążenie (bias) i przepuszcza wynik przez funkcję aktywacji
+
+Liczba parametrów sieci a problem przeuczenia: Im więcej parametrów (wag) w sieci, tym większe ryzyko przeuczenia, czyli nauczenia się danych treningowych zbyt dobrze, ale tracąc zdolność do generalizacji na nowe dane.
+
+Sieć w pełni połączona (Fully Connected Network): Patrz wcześniejszą odpowiedź dotyczącą sieci w pełni połączonej.
+
+Mini-paczki (Mini-batch) w uczeniu sieci neuronowych: To technika, w której dane treningowe są dzielone na małe partie, co pozwala na efektywne stosowanie algorytmów optymalizacyjnych, takich jak SGD.
+
+Dropout: Technika regularyzacji, polegająca na losowym wyłączaniu pewnych neuronów podczas treningu, aby uniknąć przeuczenia.
+
+Wczesny stop (Early Stopping): Technika regularyzacji, polegająca na zatrzymywaniu treningu, gdy dokładność na zbiorze walidacyjnym przestaje się poprawiać, aby uniknąć przeuczenia.
+
+Gradient w kontekście uczenia sieci neuronowych: To wektor, który wskazuje kierunek najszybszego wzrostu funkcji kosztu, używany w procesie optymalizacji.
+
+Nieliniowość funkcji aktywacji: Funkcje aktywacji są nieliniowe, co pozwala sieci neuronowej modelować bardziej skomplikowane zależności w danych treningowych.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.

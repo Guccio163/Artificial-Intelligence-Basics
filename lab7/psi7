@@ -1,0 +1,98 @@
+
+
+
+
+
+
+Globalne systemy rekomendacyjne
+Globalne systemy rekomendacyjne to podejście, które uwzględnia preferencje i zachowania wszystkich użytkowników w systemie w celu generowania rekomendacji. Te systemy starają się znaleźć wzorce i zależności na poziomie całej społeczności lub zbioru danych.
+
+Systemy collaborative filtering (CF) & content-based
+Collaborative Filtering (CF): To podejście opiera się na analizie zachowań użytkowników oraz ocenach, które nadali oni przedmiotom. Algorytmy CF dzielą się na dwie główne kategorie: oparte na użytkownikach (analizują podobieństwo między użytkownikami) i oparte na przedmiotach (analizują podobieństwo między przedmiotami).
+Content-based: Te systemy opierają się na charakterystykach przedmiotów oraz preferencjach użytkownika. Analizują one cechy przedmiotów i próbują przewidzieć, które z nich będą odpowiadać preferencjom danego użytkownika.
+
+Problem zimnego startu (cold start)
+Problem zimnego startu występuje, gdy system rekomendacyjny ma trudności z generowaniem rekomendacji dla nowych użytkowników (cold start użytkownika) lub nowych przedmiotów (cold start przedmiotu), dla których brakuje danych historycznych.
+
+Macierz interakcji, explicit vs implicit feedback
+Macierz interakcji: To reprezentacja danych, gdzie wiersze odpowiadają użytkownikom, a kolumny przedmiotom. Wartości w macierzy mogą reprezentować oceny (explicit feedback) lub inne formy interakcji użytkownika z przedmiotami (implicit feedback).
+Explicit vs Implicit feedback: Explicit feedback to bezpośrednie oceny użytkowników (np. oceny filmów), podczas gdy implicit feedback opiera się na niejawnych interakcjach, takich jak kliknięcia, czas spędzony na stronie, itp.
+
+Podział losowy i czasowy (time split)
+Podział losowy: To praktyka dzielenia danych na zbiory treningowe i testowe w sposób losowy, aby dostarczyć uczącemu się modelowi różnorodnych przykładów.
+Podział czasowy (time split): To podejście, które dzieli dane na zbiory na podstawie czasu, co odzwierciedla naturalną ewolucję preferencji użytkowników.
+
+CF oparte o sąsiedztwo (neighborhood-based)
+
+Algorytmy oparte na sąsiedztwie analizują podobieństwo między użytkownikami lub przedmiotami, aby generować rekomendacje. Mogą to być metody oparte na użytkownikach (user-based) lub oparte na przedmiotach (item-based).
+
+CF oparte o rozkład macierzy (matrix factorization)
+To podejście zakłada, że macierz interakcji użytkownik-przedmiot może być rozkładana na dwie macierze niższego rzędu, co pozwala na wydajniejsze generowanie rekomendacji.
+
+Metryki jakości w systemach rekomendacyjnych, metryki @k, NDCG
+Metryki jakości oceniają skuteczność systemu rekomendacyjnego. Metryki @k mierzą skuteczność w top k rekomendacjach, podczas gdy NDCG (Normalized Discounted Cumulative Gain) bierze pod uwagę również pozycję rekomendacji.
+
+PYTANIA INNYCH LUDZI:
+
+Jaka jest różnica między systemami rekomendacyjnymi typu collaborative filtering (CF) i content-based? 
+- Collaborative Filtering (CF): Opiera się na ocenach i zachowaniach użytkowników. Algorytmy CF identyfikują podobieństwa między użytkownikami (user-based) lub przedmiotami (item-based) na podstawie wcześniejszych interakcji.
+Content-Based: Opiera się na charakterystykach przedmiotów oraz preferencjach użytkownika. Analizuje cechy przedmiotów, takie jak słowa kluczowe, kategorie, itp., i próbuje przewidzieć, które z nich będą odpowiadać preferencjom danego 
+
+Czym są ukryte czynniki (latent factors) w rozkładach macierzy (matrix factorization) i co intuicyjnie reprezentują w kontekście systemów rekomendacyjnych?
+W kontekście rozkładów macierzy, ukryte czynniki (latent factors) są abstrakcyjnymi, niejawymi cechami, które są wyodrębniane z danych, aby reprezentować wewnętrzne relacje między użytkownikami a przedmiotami w systemach rekomendacyjnych. W skrócie, są to cechy, których nie można bezpośrednio obserwować, ale są istotne dla rozumienia preferencji użytkowników i charakterystyk przedmiotów.
+
+W kontekście systemów rekomendacyjnych, ukryte czynniki są używane w technikach takich jak Matrix Factorization (rozkład macierzy) do reprezentowania użytkowników i przedmiotów w niższym wymiarze. Oto intuicyjne reprezentacje ukrytych czynników:
+
+Ukryte czynniki dla użytkowników:
+-Odpowiadają preferencjom i stylom użytkowników, które niekoniecznie są łatwe do uchwycenia za pomocą dostępnych danych. Mogą reprezentować, na przykład, zainteresowania, preferencje gatunkowe czy preferencje dotyczące określonych cech przedmiotów.
+Ukryte czynniki dla przedmiotów:
+Odpowiadają cechom, które są ważne dla użytkowników, ale mogą być trudne do jednoznacznego określenia na podstawie dostępnych informacji. Na przykład, w przypadku filmów ukryte czynniki mogą reprezentować różne aspekty takie jak napięcie, humor czy złożoność fabuły.
+Przestrzeń ukryta:
+Ukryte czynniki są umieszczone w przestrzeni ukrytej, która jest niższym wymiarem niż pełna macierz ocen użytkowników i przedmiotów. To pozwala na kompresję informacji, eliminację szumów i generalizację do wzorców, co może poprawić zdolność modelu do ogólnego uchwycenia preferencji.
+
+Po co stosować globalne (niepersonalizowane) systemy rekomendacyjne?
+-Globalne, niepersonalizowane systemy rekomendacyjne mogą być stosowane z kilku powodów, nawet pomimo braku indywidualizacji rekomendacji dla poszczególnych użytkowników. Oto kilka przypadków, w których tego typu podejście może być użyteczne:
+Brak danych użytkownika:
+Gdy brakuje wystarczających danych na temat preferencji indywidualnych użytkowników, globalne systemy rekomendacyjne mogą dostarczać ogólnych rekomendacji, które mają szansę być akceptowalne przez większość osób.
+Rozpoczynanie działalności:
+W przypadku nowych platform lub serwisów, które nie posiadają jeszcze historii interakcji użytkowników, globalne rekomendacje mogą stanowić dobry punkt wyjścia. Pomagają one w zapewnieniu jakiejkolwiek wartości użytkownikom, zanim pojawią się wystarczające dane do wprowadzenia personalizacji.
+Długi ogon (long tail) produktów:
+W przypadku platform oferujących szeroki zakres produktów lub treści, globalne rekomendacje mogą pomóc w promowaniu mniej popularnych lub nowych elementów w długim ogonie. W zastosowaniach takich jak e-commerce, pomagają one uniknąć skoncentrowania się tylko na najpopularniejszych produktach.
+Problemy zimnego startu:
+Gdy system rekomendacyjny napotyka problemy z zimnym startem, czyli trudnością w generowaniu rekomendacji dla nowych użytkowników lub nowych przedmiotów, globalne rekomendacje mogą być używane jako tymczasowe rozwiązanie, aby dostarczyć wartość.
+Rekomendacje dla ogółu użytkowników:
+W niektórych przypadkach, szczególnie w przypadku treści lub produktów, które są powszechnie akceptowane przez różne grupy użytkowników, globalne rekomendacje mogą być wystarczające do zaspokojenia potrzeb większości odbiorców.
+Uproszczenie procesu rekomendacyjnego:
+W niektórych sytuacjach, szczególnie w prostszych aplikacjach, globalne rekomendacje mogą być bardziej zwięzłe i łatwiejsze do zrozumienia dla użytkowników. Mogą również zredukować skomplikowanie procesu implementacji systemu rekomendacyjnego.
+
+W jaki sposób można użyć zwykłych algorytmów klasyfikacji do rekomendacji? Jakiego rodzaju jest to system?
+-Użycie zwykłych algorytmów klasyfikacji do rekomendacji jest jednym ze sposobów na implementację systemów rekomendacyjnych. Ten rodzaj systemu rekomendacyjnego nazywany jest czasem modelem klasyfikacyjnym do rekomendacji (classification-based recommendation system). Oto kilka kroków, jak można to zrealizować:
+Przygotowanie danych:
+Dane muszą być przygotowane w taki sposób, aby każda obserwacja obejmowała informacje dotyczące relacji między użytkownikami a przedmiotami oraz związane z nimi etykiety klasyfikacyjne. Na przykład, może to obejmować informacje o ocenach użytkowników dla przedmiotów (pozytywne i negatywne), a zadaniem może być przewidywanie, czy użytkownik polubi nowy przedmiot.
+Zastosowanie algorytmu klasyfikacji:
+Zwykłe algorytmy klasyfikacji, takie jak regresja logistyczna, maszyny wektorów nośnych (SVM), czy drzewa decyzyjne, mogą być używane do przewidywania etykiet klasyfikacyjnych dla nowych obserwacji. W tym przypadku, etykiety odpowiadają preferencjom użytkownika w kontekście rekomendacji.
+Wybór cech (features):
+Cechy wejściowe dla algorytmu klasyfikacji mogą obejmować różne atrybuty użytkowników, przedmiotów oraz dowolne dodatkowe informacje, które mogą pomóc w predykcji preferencji. Mogą to być na przykład cechy demograficzne użytkownika, cechy przedmiotów, itp.
+Uczenie modelu:
+Model klasyfikacyjny jest uczony na podstawie dostępnych danych, aby nauczyć się relacji między cechami a preferencjami użytkowników. Dla nowych obserwacji model będzie potrafił przewidzieć, czy użytkownik polubi dany przedmiot.
+Generowanie rekomendacji:
+Po nauczeniu modelu, można go użyć do generowania rekomendacji dla użytkowników poprzez przewidywanie, czy dany przedmiot będzie dla nich odpowiedni. Można ocenić te rekomendacje na podstawie prawdopodobieństwa przypisania danej etykiety klasyfikacyjnej.
+Ten rodzaj systemu rekomendacyjnego oparty na algorytmach klasyfikacji jest stosunkowo prosty w zrozumieniu i implementacji. Jednakże, w porównaniu z bardziej zaawansowanymi metodami, takimi jak collaborative filtering czy matrix factorization, może mieć pewne ograniczenia, zwłaszcza w obszarze braku interpretowalności modelu oraz możliwości uwzględnienia subtelnych zależności między użytkownikami a przedmiotami. Dlatego bardziej zaawansowane techniki są często stosowane w bardziej zaawansowanych systemach rekomendacyjnych.
+
+Opisz zastosowanie statystyki bayesowskiej w globalnych (niepersonalizowanych) systemach rekomendacyjnych.
+-Statystyka Bayesowska może być używana w globalnych systemach rekomendacyjnych do modelowania i aktualizowania wiedzy na temat preferencji użytkowników i charakterystyk przedmiotów. Mimo że metody bayesowskie są często używane w kontekście personalizowanych rekomendacji, mogą być również stosowane w globalnych systemach, szczególnie gdy brak jest wystarczających danych o preferencjach indywidualnych. Poniżej znajduje się krótki opis, jak można zastosować statystykę Bayesowską w tego rodzaju systemach:
+Prior i Posterior:
+W podejściu bayesowskim, rozważa się prior, który reprezentuje wstępną wiedzę na temat rozkładu preferencji użytkowników i charakterystyk przedmiotów. Następnie, gdy pojawiają się nowe dane, aktualizuje się te rozkłady, uzyskując tzw. posterior distribution. W kontekście rekomendacji, prior może odzwierciedlać ogólne trendy i preferencje globalnej populacji.
+Likelihood:
+Likelihood reprezentuje prawdopodobieństwo danych obserwacyjnych pod warunkiem określonych wartości parametrów modelu. W kontekście rekomendacji, może to oznaczać prawdopodobieństwo, że użytkownik polubiłby dany przedmiot, biorąc pod uwagę dotychczasowe oceny użytkownika i oceny innych użytkowników.
+Aktualizacja modelu:
+Na podstawie nowych danych, model bayesowski jest aktualizowany. Aktualizacja modelu pozwala na dostosowanie parametrów modelu do nowej wiedzy, a w rezultacie dostosowanie preferencji globalnej populacji.
+Przewidywanie:
+Po aktualizacji modelu, można korzystać z niego do przewidywania preferencji użytkowników w kontekście globalnym. Otrzymane prawdopodobieństwa mogą być używane do generowania rekomendacji na podstawie ogólnych tendencji.
+Kontrola niepewności:
+Statystyka Bayesowska umożliwia również uwzględnienie niepewności w modelu. Prawdopodobieństwa przypisane do preferencji użytkowników i charakterystyk przedmiotów są przedstawiane jako rozkłady prawdopodobieństwa, co pozwala na bardziej elastyczne zarządzanie niepewnością w danych.
+Równoważenie priora i likelihood:
+W procesie bayesowskim równoważy się wiedzę a priori (prior) z nowymi dowodami (likelihood), co jest kluczowe w sytuacjach, gdzie dane są ograniczone, a prior jest ważnym źródłem informacji.
+Zastosowanie statystyki Bayesowskiej w globalnych systemach rekomendacyjnych może być korzystne, gdy mamy mało danych na temat preferencji użytkowników, a chcemy uwzględnić ogólne trendy w populacji. Wprowadzenie tego podejścia może pomóc w lepszym zrozumieniu rozkładu preferencji i charakterystyk przedmiotów, nawet bez dokładnych informacji na temat indywidualnych użytkowników.
+
+Czym różnią się systemy user-based od item-based w systemach collaborative filtering (CF) opartych o sąsiedztwo (neighborhood-based)?

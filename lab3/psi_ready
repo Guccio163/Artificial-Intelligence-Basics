@@ -1,0 +1,31 @@
+Entropia krzyżowa (Cross-Entropy): Mierzy różnicę między dwiema rozkładami prawdopodobieństwa, stosowana często w problemach klasyfikacyjnych.
+
+Warstwa w pełni połączona w sieciach MLP:
+Warstwa w pełni połączona (fully connected) oznacza, że każdy neuron w danej warstwie jest połączony z każdym neuronem w warstwie poprzedniej i następnej. W warstwie tej każde wyjście z poprzedniej warstwy jest wejściem dla każdego neuronu.
+
+Propagacja wsteczna w kontekście uczenia sieci neuronowych:
+To algorytm używany do dostosowywania wag sieci neuronowej w celu minimalizacji funkcji kosztu. Wykorzystuje gradient funkcji kosztu względem wag w celu określenia, jak bardzo każda waga powinna być dostosowana.
+
+Spadek wzdłuż gradientu:
+To proces aktualizacji wag w kierunku przeciwnym do gradientu funkcji kosztu, z zachowaniem pewnego współczynnika uczenia, aby minimalizować funkcję kosztu.
+
+Funkcja aktywacji:
+Jest to nieliniowa funkcja stosowana na każdym neuronie w sieci neuronowej, której celem jest wprowadzenie nieliniowości do modelu. Przykłady to sigmoid, tanh, ReLU (Rectified Linear Unit).
+
+Właściwości funkcji kosztu i aktywacji:
+Funkcje kosztu powinny być różniczkowalne, aby można było zastosować propagację wsteczną. Funkcje aktywacji powinny być nieliniowe, aby sieć mogła modelować bardziej skomplikowane zależności.
+
+Warunek dla efektywnej klasyfikacji danych nieliniowo separowalnych:
+Sieć neuronowa musi mieć co najmniej jedną warstwę ukrytą z funkcją aktywacji nieliniowej, aby być zdolną do modelowania nieliniowych zależności.
+
+Dropout:
+To technika regularyzacji używana w treningu sieci neuronowych, polegająca na losowym wyłączaniu pewnych neuronów w trakcie każdej iteracji treningowej, co pomaga uniknąć przeuczenia.
+
+Metoda propagacji wstecznej:
+Jest to algorytm optymalizacyjny, który wykorzystuje gradient funkcji kosztu do dostosowywania wag wstecz, od warstwy wyjściowej do warstwy wejściowej.
+
+Wczesne zatrzymywanie (early stopping):
+To technika regularyzacji, która polega na zatrzymaniu treningu, gdy dokładność na zbiorze walidacyjnym przestaje się poprawiać, aby uniknąć przeuczenia.
+
+Współczynnik uczenia:
+Jest to parametr kontrolujący, jak bardzo wagi sieci są aktualizowane podczas treningu. Odpowiedni wybór współczynnika uczenia jest istotny dla skutecznego uczenia sieci neuronowej.

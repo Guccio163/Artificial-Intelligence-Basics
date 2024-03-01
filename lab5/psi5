@@ -1,0 +1,33 @@
+
+
+
+
+
+
+
+1. Działanie rekurencyjnych sieci neuronowych (RNN):
+Rekurencyjne sieci neuronowe (RNN) są rodzajem sztucznych sieci neuronowych, które zostały zaprojektowane do pracy z danymi sekwencyjnymi. Kluczową cechą RNN jest to, że posiadają pamięć wewnętrzną, co pozwala im uwzględniać kontekst historyczny przy analizie kolejnych elementów sekwencji, na przykład w analizie tekstu czy przetwarzaniu sygnałów czasowych.
+
+2. Działanie mechanizmu atencji:
+Mechanizm atencji pozwala modelowi "skupić się" na konkretnych fragmentach danych wejściowych, zamiast traktować całość równo. Jest szczególnie przydatny w kontekście długich sekwencji, gdzie nie wszystkie elementy są równie ważne. Mechanizm ten został wprowadzony w celu poprawy zdolności modeli do przetwarzania długich zdań, tłumaczenia maszynowego, analizy obrazów itp.
+
+3. Statyczne osadzenia słów:
+Statyczne osadzenia słów (ang. word embeddings) to reprezentacje słów w postaci wektorów o stałej długości. Te wektory są tworzone w procesie uczenia i przechowują semantyczną informację o relacjach między słowami. Popularne metody to Word2Vec, GloVe czy FastText.
+
+4. Model językowy, w tym znakowy model językowy:
+Model językowy prognozuje prawdopodobieństwo wystąpienia kolejnego słowa (lub znaku) w danym kontekście. Modele te są kluczowe w przetwarzaniu języka naturalnego, tłumaczeniu maszynowym, generowaniu tekstu i wielu innych zadaniach.
+
+5. Pre-trening w kontekście modeli językowych:
+Pre-trening to proces wstępnego uczenia modelu na dużym zbiorze danych przed dostosowaniem go do konkretnego zadania. W przypadku modeli językowych, pre-trening może polegać na nauce modelu na ogromnych zbiorach tekstów, dzięki czemu model zdobywa wiedzę o strukturze języka.
+
+6. Wsteczna propagacja błędu w czasie:
+Wsteczna propagacja błędu w czasie (ang. Backpropagation Through Time, BPTT) to technika szkolenia rekurencyjnych sieci neuronowych. Polega na rozszerzeniu standardowej wstecznej propagacji błędu na przypadki czasowe, aby uwzględnić sekwencyjny charakter danych.
+
+7. Długa pamięć krótkotrwała (LSTM):
+LSTM to specjalna architektura rekurencyjnej sieci neuronowej, która została zaprojektowana w celu radzenia sobie z problemem zanikającego gradientu. Dzięki mechanizmom kontroli pamięci, LSTM są zdolne do utrzymywania informacji na dłuższe odległości czasowe.
+
+8. Architektura modeli: GPT, BERT:
+GPT (Generative Pre-trained Transformer) i BERT (Bidirectional Encoder Representations from Transformers) to dwie znane architektury modeli językowych oparte na transformerach. GPT jest modelem generatywnym, zdolnym do generowania tekstu, podczas gdy BERT jest modelem zdolnym do zrozumienia kontekstu dwukierunkowego (ang. bidirectional) w zdaniach.
+
+9. Duże modele językowe (LLMs):
+Duże modele językowe to potężne sieci neuronowe, które są trenowane na ogromnych zbiorach danych. Przykłady to GPT-3 i BERT, które osiągnęły rewelacyjne wyniki w różnorodnych zadaniach związanych z językiem naturalnym, takich jak generowanie tekstu, tłumaczenie maszynowe, czy odpowiedzi na pytania. Duże modele charakteryzują się zdolnością do przechwytywania złożonych zależności i generalizacji na szeroką gamę zadań.

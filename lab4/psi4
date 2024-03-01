@@ -1,0 +1,26 @@
+
+
+
+
+
+
+Operacja konwolucji (splotu):
+Podstawowy krok w warstwie konwolucyjnej. Polega na przesuwaniu filtru (małej macierzy wag) po obrazie wejściowym, obliczając iloczyn punktowy pomiędzy elementami filtra a odpowiadającymi im pikselami obrazu i sumując te wyniki. Operacja ta pomaga w wyodrębnianiu cech lokalnych z danych wejściowych.
+
+Warstwa konwolucyjna w sieci neuronowej:
+Składa się z zestawu filtrów, które są przesuwane po danych wejściowych w celu wyodrębnienia różnych cech. Każdy filtr generuje tzw. mapa cech, która jest przekazywana do kolejnej warstwy.
+
+Warstwa pooling-owa:
+Warstwa pooling-owa służy do zmniejszania rozmiaru przestrzennego map cech poprzez np. operację max pooling, która wybiera maksymalną wartość z danego obszaru. To pomaga zredukować liczbę parametrów i obliczeń w sieci, jednocześnie utrzymując ważne cechy.
+
+Budowa typowej sieci konwolucyjnej (np. LeNet):
+Typowa sieć konwolucyjna składa się z warstw konwolucyjnych, warstw pooling-owych, warstw w pełni połączonych (fully connected) oraz warstw aktywacji (np. ReLU). LeNet to jedna z wcześniejszych architektur CNN, stworzona do rozpoznawania odręcznie pisanych cyfr.
+
+Detekcja obiektów:
+Detekcja obiektów w obrazach polega na znajdowaniu i klasyfikowaniu obiektów. Techniki te często wykorzystują konwolucyjne sieci neuronowe w połączeniu z mechanizmami, takimi jak region proposal networks (RPN) czy też warstwy anchor box, aby skutecznie wykrywać obiekty różnych kształtów i rozmiarów.
+
+Wybór bounding-box-ów, kandydatury, confidence levels:
+W detekcji obiektów, algorytmy starają się wybrać obszary (bounding boxy), które zawierają obiekty. Modele przypisują także poziomy pewności (confidence levels) dla każdego zidentyfikowanego obiektu. Wybór odbywa się na podstawie predykcji modelu, a confidence level informuje o pewności modelu co do trafności swojego wyboru.
+
+Fine-tuning i pre-training, wykorzystywanie gotowych sieci:
+Fine-tuning to proces dostosowywania gotowego modelu do konkretnego zadania poprzez dostosowywanie wag w istniejącej architekturze. Pre-training polega na wstępnym uczeniu modelu na dużym zbiorze danych, najczęściej na zadaniu klasyfikacji obrazów, a następnie fine-tuningu dla konkretnej aplikacji. Gotowe modele, takie jak ResNet, VGG czy Inception, są powszechnie używane jako punkt wyjścia w projektach związanych z głębokim uczeniem.

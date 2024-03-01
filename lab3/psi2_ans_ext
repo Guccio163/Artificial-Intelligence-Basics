@@ -1,0 +1,68 @@
+Spadek wzdłuż gradientu:
+Spadek wzdłuż gradientu to algorytm optymalizacyjny, który minimalizuje funkcję kosztu, dostosowując wagi sieci w kierunku przeciwnym do gradientu funkcji kosztu. Algorytm ten powtarza ten proces, aż osiągnie minimum lub zbliży się do niego.
+Stochastyczny spadek wzdłuż gradientu:
+Stochastyczny spadek wzdłuż gradientu to wariant spadku wzdłuż gradientu, w którym aktualizacja wag następuje po każdym pojedynczym przykładzie treningowym. Jest bardziej efektywny obliczeniowo niż spadek wzdłuż gradientu, zwłaszcza dla dużych zbiorów danych.
+Funkcja aktywacji neuronu:
+Funkcja aktywacji decyduje o tym, czy dany neuron powinien zostać aktywowany czy nie. Popularne funkcje to sigmoid (ogranicza wynik między 0 a 1), tanh (ogranicza wynik między -1 a 1), ReLU (zwraca 0 dla wartości ujemnych, a dla dodatnich zwraca samą wartość) i softmax (używana w warstwie wyjściowej do problemów wieloklasowych).
+Rodzaje funkcji kosztu w uczeniu sieci neuronowych:
+Błąd średniokwadratowy (MSE) jest stosowany w problemach regresji, a entropia krzyżowa (Cross-Entropy) w problemach klasyfikacji. MSE mierzy średnią kwadratów różnic między prognozowanymi a rzeczywistymi wartościami, podczas gdy entropia krzyżowa mierzy różnicę między rozkładami prawdopodobieństwa prognozowanymi a rzeczywistymi.
+Współczynnik uczenia:
+Współczynnik uczenia to parametr, który kontroluje, jak duże kroki wykonuje algorytm optymalizacyjny podczas dostosowywania wag. Zbyt duży współczynnik może prowadzić do oscylacji, podczas gdy zbyt mały może sprawić, że proces uczenia będzie bardzo wolny.
+Własności funkcji kosztu w kontekście uczenia sieci neuronowych:
+Funkcje kosztu muszą być różniczkowalne, aby można było stosować propagację wsteczną. To umożliwia obliczanie gradientu i aktualizację wag w procesie uczenia.
+Sieć w pełni połączona:
+Sieć w pełni połączona, znana również jako MLP (Multilayer Perceptron), składa się z warstw neuronów, gdzie każdy neuron jest połączony z każdym neuronem w warstwie poprzedniej i następnej. To sprawia, że sieć ta jest zdolna do modelowania skomplikowanych zależności.
+Funkcja softmax:
+Funkcja softmax przekształca wyniki na rozkład prawdopodobieństwa, co jest przydatne w problemach klasyfikacji wieloklasowej. Jest często używana w warstwie wyjściowej sieci neuronowej.
+Entropia krzyżowa:
+Entropia krzyżowa to funkcja kosztu, szczególnie skuteczna w problemach klasyfikacji, mierząca różnicę między rozkładami prawdopodobieństwa prognozowanymi a rzeczywistymi.
+Sieć neuronowa jako uniwersalny aproksymator:
+Twierdzenie to mówi, że sieć neuronowa o jednej warstwie ukrytej i nieliniowych funkcjach aktywacji jest zdolna przybliżyć dowolną funkcję ciągłą na ograniczonym zbiorze z dowolną dokładnością, pod warunkiem odpowiedniego dobrania liczby neuronów.
+Wsteczna propagacja błędu:
+Wsteczna propagacja błędu to algorytm uczenia nadzorowanego, który wykorzystuje gradient funkcji kosztu do aktualizacji wag w sieci neuronowej, minimalizując błąd predykcji.
+Działanie pojedynczego neuronu sieci neuronowej:
+Patrz wcześniejsze wyjaśnienie dotyczące pojedynczego neuronu.
+Liczba parametrów sieci a problem przeuczenia:
+Zwiększenie liczby parametrów w sieci neuronowej może prowadzić do przeuczenia, gdzie model idealnie dopasowuje się do danych treningowych, ale traci zdolność do generalizacji na nowe dane.
+Sieć w pełni połączona:
+Patrz wcześniejsze wyjaśnienie dotyczące sieci w pełni połączonej.
+Mini-paczki (Mini-batch) w uczeniu sieci neuronowych:
+Mini-paczki to technika, w której dane treningowe są dzielone na małe partie, co pozwala na efektywne obliczenia gradientu i przyspiesza proces uczenia.
+Dropout:
+Dropout to technika regularyzacji, w której losowo wybrane neurony są wyłączane w trakcie treningu, aby zapobiec przeuczeniu.
+Wczesny stop (Early Stopping):
+Wczesny stop to technika regularyzacji, która polega na zatrzymywaniu treningu, gdy dokładność modelu na zbiorze walidacyjnym przestaje się poprawiać, aby uniknąć przeuczenia.
+Gradient w kontekście uczenia sieci neuronowych:
+Gradient to wektor pochodnych cząstkowych funkcji kosztu względem wag, wykorzystywany w procesie optymalizacji.
+Nieliniowość funkcji aktywacji:
+Nieliniowość funkcji aktywacji jest kluczowa, ponieważ pozwala sieci na modelowanie bardziej skomplikowanych zależności w danych treningowych, co jest istotne dla efektywnego uczenia.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
